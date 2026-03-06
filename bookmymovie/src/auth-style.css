@@ -1,0 +1,413 @@
+/* Auth Modal Styles - BookMyShow Style - Fixed */
+
+/* Auth Modal Overlay */
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+/* Auth Modal Container */
+.auth-modal-container {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Close Button */
+.auth-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.auth-close-btn:hover {
+  color: #333;
+}
+
+/* Header */
+.auth-modal-container h2 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+.auth-modal-container h2 i {
+  margin-right: 10px;
+  color: #e53935;
+}
+
+/* Form */
+.auth-modal-container form {
+  padding: 25px;
+}
+
+.auth-modal h2 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+.auth-modal h2 i {
+  margin-right: 10px;
+  color: #e53935;
+}
+
+/* BookMyShow brand color */
+:root {
+  --bms-red: #e53935;
+  --bms-red-dark: #c62828;
+  --bms-gray: #666;
+  --bms-light-gray: #f5f5f5;
+  --bms-border: #e0e0e0;
+}
+
+.login-toggle {
+  display: flex;
+  gap: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--bms-border);
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: transparent;
+  color: var(--bms-gray);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.toggle-btn.active {
+  color: var(--bms-red);
+  border-bottom-color: var(--bms-red);
+  background: #fff;
+}
+
+.toggle-btn:hover:not(.active) {
+  background: #fafafa;
+  color: #333;
+}
+
+.auth-modal form {
+  padding: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--bms-border);
+  border-radius: 4px;
+  background: #fafafa;
+  color: #333;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--bms-red);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  padding-right: 50px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toggle-password:hover {
+  color: var(--bms-red);
+}
+
+.error-message {
+  background: #ffebee;
+  border: 1px solid #ef5350;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--bms-red);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background: var(--bms-red-dark);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #999;
+  font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bms-border);
+}
+
+.auth-divider span {
+  padding: 0 15px;
+}
+
+/* Social Login Buttons */
+.social-login {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--bms-border);
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.social-btn.google img,
+.social-btn.facebook img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Terms checkbox */
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.terms-checkbox input {
+  margin-top: 2px;
+  accent-color: var(--bms-red);
+}
+
+.terms-checkbox label {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.terms-checkbox a {
+  color: var(--bms-red);
+  text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+}
+
+.auth-switch {
+  text-align: center;
+  padding: 15px 25px 25px;
+  background: #f5f5f5;
+  color: #666;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+}
+
+.auth-switch button {
+  background: none;
+  border: none;
+  color: var(--bms-red);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.auth-switch button:hover {
+  text-decoration: underline;
+}
+
+/* User greeting in header */
+.user-greeting {
+  color: #fff;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+/* Auth buttons - BookMyShow style */
+.nav-btn.auth-btn {
+  background: var(--bms-red);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn.auth-btn:hover {
+  background: var(--bms-red-dark);
+}
+
+.nav-btn.register-btn {
+  background: transparent;
+  border: 2px solid var(--bms-red);
+  color: #fff;
+}
+
+.nav-btn.register-btn:hover {
+  background: var(--bms-red);
+}
+
+/* Logout button */
+.nav-btn.logout-btn {
+  background: #666;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn.logout-btn:hover {
+  background: #888;
+}
+
+/* Auth Modal - Higher z-index to prevent overlap */
+.auth-modal {
+  z-index: 99999;
+}
+
+/* Modal overlay for auth - higher z-index */
+.modal:has(.auth-modal) {
+  z-index: 99998;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Close button styling */
+.auth-modal .close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  z-index: 10;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+}
+
+.auth-modal .close-modal:hover {
+  color: #333;
+}
+
+/* Hide default modal content styling for auth modal */
+.auth-modal ~ .modal-content,
+.auth-modal + .modal-content {
+  display: none;
+}
+

@@ -1,0 +1,225 @@
+/* Success Modal */
+.success-content {
+  max-width: 420px;
+  text-align: center;
+  padding: 0;
+  background: linear-gradient(180deg, #1a1f4e 0%, #16223a 100%);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+}
+
+.success-header {
+  padding: 2rem 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.ticket-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  animation: successPop 0.5s ease;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+.ticket-icon i {
+  font-size: 2.5rem;
+  color: #0a0a1a;
+}
+
+@keyframes successPop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.success-header h2 {
+  color: #fff;
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.success-header p {
+  color: #888;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.success-body {
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.movie-ticket {
+  background: linear-gradient(135deg, #252550, #1e2a4a);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ticket-movie-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.ticket-poster {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.ticket-details h3 {
+  color: #fff;
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ticket-meta {
+  color: #888;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.ticket-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.ticket-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-info-item label {
+  color: #666;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+}
+
+.ticket-info-item span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.ticket-info-item.time span {
+  color: #00ff88;
+}
+
+.ticket-info-item.seats span {
+  color: #f5c518;
+}
+
+.booking-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  background: rgba(245, 197, 24, 0.1);
+  border-radius: 8px;
+  border: 1px dashed rgba(245, 197, 24, 0.3);
+}
+
+.booking-id label {
+  color: #888;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.booking-id span {
+  color: #f5c518;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.success-actions {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.success-actions button {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-download {
+  background: linear-gradient(135deg, #00f5ff, #00ff88);
+  color: #0a0a1a;
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 245, 255, 0.4);
+}
+
+.btn-share {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-share:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.success-footer {
+  padding: 1rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.success-footer p {
+  color: #666;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Confetti animation for success */
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.success-confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: confetti 3s ease-out forwards;
+}
+
+.confetti-1 { left: 10%; background: #00ff88; animation-delay: 0s; }
+.confetti-2 { left: 20%; background: #00f5ff; animation-delay: 0.2s; }
+.confetti-3 { left: 30%; background: #ff00ff; animation-delay: 0.4s; }
+.confetti-4 { left: 40%; background: #ffaa00; animation-delay: 0.6s; }
+.confetti-5 { left: 50%; background: #00ff88; animation-delay: 0.8s; }
+.confetti-6 { left: 60%; background: #00f5ff; animation-delay: 1s; }
+.confetti-7 { left: 70%; background: #ff00ff; animation-delay: 1.2s; }
+.confetti-8 { left: 80%; background: #ffaa00; animation-delay: 1.4s; }
+.confetti-9 { left: 90%; background: #00ff88; animation-delay: 1.6s; }
